@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DB1F400E87C4CB2BA4BB6F21 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19D3AD9AC79B5D2512B9AEC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F86623891B065F630097D72A /* shattered.png in Resources */ = {isa = PBXBuildFile; fileRef = F86623881B065F630097D72A /* shattered.png */; };
+		F866238D1B0669300097D72A /* ios7-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = F866238C1B0669300097D72A /* ios7-plus.png */; };
 		F8E58B971B0439D1008D81DD /* ios7-person.png in Resources */ = {isa = PBXBuildFile; fileRef = F8E58B961B0439D1008D81DD /* ios7-person.png */; };
 		F8F90DE61B040A8300A26232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F90DE51B040A8300A26232 /* AppDelegate.swift */; };
 		F8F90DE81B040A8300A26232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F90DE71B040A8300A26232 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 		68F469AD9460AEBB0C5DA6C8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A19D3AD9AC79B5D2512B9AEC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86623881B065F630097D72A /* shattered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shattered.png; sourceTree = "<group>"; };
+		F866238C1B0669300097D72A /* ios7-plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7-plus.png"; sourceTree = "<group>"; };
 		F8E58B961B0439D1008D81DD /* ios7-person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7-person.png"; sourceTree = "<group>"; };
 		F8F90DE01B040A8200A26232 /* FastMarkett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastMarkett.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F90DE41B040A8300A26232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		F8E58B8F1B041C80008D81DD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F866238C1B0669300097D72A /* ios7-plus.png */,
 				F86623881B065F630097D72A /* shattered.png */,
 				F8E58B961B0439D1008D81DD /* ios7-person.png */,
 			);
@@ -241,6 +244,7 @@
 			files = (
 				F86623891B065F630097D72A /* shattered.png in Resources */,
 				F8F90DEB1B040A8300A26232 /* Main.storyboard in Resources */,
+				F866238D1B0669300097D72A /* ios7-plus.png in Resources */,
 				F8F90DF01B040A8300A26232 /* LaunchScreen.xib in Resources */,
 				F8E58B971B0439D1008D81DD /* ios7-person.png in Resources */,
 				F8F90E081B0412BB00A26232 /* Podfile in Resources */,
