@@ -15,6 +15,9 @@ class PersonalListCell: UITableViewCell {
     
     @IBOutlet weak var productPrice: UILabel!
     
+    @IBOutlet weak var productSuper: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1F400E87C4CB2BA4BB6F21 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19D3AD9AC79B5D2512B9AEC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F86623891B065F630097D72A /* shattered.png in Resources */ = {isa = PBXBuildFile; fileRef = F86623881B065F630097D72A /* shattered.png */; };
+		F8E58B971B0439D1008D81DD /* ios7-person.png in Resources */ = {isa = PBXBuildFile; fileRef = F8E58B961B0439D1008D81DD /* ios7-person.png */; };
 		F8F90DE61B040A8300A26232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F90DE51B040A8300A26232 /* AppDelegate.swift */; };
 		F8F90DE81B040A8300A26232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F90DE71B040A8300A26232 /* ViewController.swift */; };
 		F8F90DEB1B040A8300A26232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F90DE91B040A8300A26232 /* Main.storyboard */; };
@@ -14,6 +17,7 @@
 		F8F90DF01B040A8300A26232 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8F90DEE1B040A8300A26232 /* LaunchScreen.xib */; };
 		F8F90DFC1B040A8300A26232 /* FastMarkettTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F90DFB1B040A8300A26232 /* FastMarkettTests.swift */; };
 		F8F90E061B040BE800A26232 /* PersonalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F90E051B040BE800A26232 /* PersonalListCell.swift */; };
+		F8F90E081B0412BB00A26232 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F8F90E071B0412BB00A26232 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DE9A4843E571AE6815AF7B5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		68F469AD9460AEBB0C5DA6C8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A19D3AD9AC79B5D2512B9AEC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F86623881B065F630097D72A /* shattered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shattered.png; sourceTree = "<group>"; };
+		F8E58B961B0439D1008D81DD /* ios7-person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7-person.png"; sourceTree = "<group>"; };
 		F8F90DE01B040A8200A26232 /* FastMarkett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastMarkett.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F90DE41B040A8300A26232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8F90DE51B040A8300A26232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +47,7 @@
 		F8F90DFA1B040A8300A26232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8F90DFB1B040A8300A26232 /* FastMarkettTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastMarkettTests.swift; sourceTree = "<group>"; };
 		F8F90E051B040BE800A26232 /* PersonalListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalListCell.swift; sourceTree = "<group>"; };
+		F8F90E071B0412BB00A26232 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB1F400E87C4CB2BA4BB6F21 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +69,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD1EE0C28D231375FCF6774F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DE9A4843E571AE6815AF7B5 /* Pods.debug.xcconfig */,
+				68F469AD9460AEBB0C5DA6C8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E5E16C84FE5C8C1DB2D41447 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A19D3AD9AC79B5D2512B9AEC /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8E58B8F1B041C80008D81DD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F86623881B065F630097D72A /* shattered.png */,
+				F8E58B961B0439D1008D81DD /* ios7-person.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		F8F90DD71B040A8200A26232 = {
 			isa = PBXGroup;
 			children = (
+				F8F90E071B0412BB00A26232 /* Podfile */,
 				F8F90DE21B040A8200A26232 /* FastMarkett */,
 				F8F90DF81B040A8300A26232 /* FastMarkettTests */,
 				F8F90DE11B040A8200A26232 /* Products */,
+				BD1EE0C28D231375FCF6774F /* Pods */,
+				E5E16C84FE5C8C1DB2D41447 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +119,7 @@
 		F8F90DE21B040A8200A26232 /* FastMarkett */ = {
 			isa = PBXGroup;
 			children = (
+				F8E58B8F1B041C80008D81DD /* images */,
 				F8F90DE51B040A8300A26232 /* AppDelegate.swift */,
 				F8F90DE71B040A8300A26232 /* ViewController.swift */,
 				F8F90DE91B040A8300A26232 /* Main.storyboard */,
@@ -122,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8F90DFF1B040A8300A26232 /* Build configuration list for PBXNativeTarget "FastMarkett" */;
 			buildPhases = (
+				468DB12574814DDB287C0FFE /* Check Pods Manifest.lock */,
 				F8F90DDC1B040A8200A26232 /* Sources */,
 				F8F90DDD1B040A8200A26232 /* Frameworks */,
 				F8F90DDE1B040A8200A26232 /* Resources */,
+				2C1905EDEE5BE884D70C8D2E /* Embed Pods Frameworks */,
+				B8382020667394C14339E027 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,8 +239,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86623891B065F630097D72A /* shattered.png in Resources */,
 				F8F90DEB1B040A8300A26232 /* Main.storyboard in Resources */,
 				F8F90DF01B040A8300A26232 /* LaunchScreen.xib in Resources */,
+				F8E58B971B0439D1008D81DD /* ios7-person.png in Resources */,
+				F8F90E081B0412BB00A26232 /* Podfile in Resources */,
 				F8F90DED1B040A8300A26232 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +256,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C1905EDEE5BE884D70C8D2E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		468DB12574814DDB287C0FFE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B8382020667394C14339E027 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F8F90DDC1B040A8200A26232 /* Sources */ = {
@@ -344,6 +439,7 @@
 		};
 		F8F90E001B040A8300A26232 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DE9A4843E571AE6815AF7B5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FastMarkett/Info.plist;
@@ -354,6 +450,7 @@
 		};
 		F8F90E011B040A8300A26232 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F469AD9460AEBB0C5DA6C8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FastMarkett/Info.plist;
@@ -415,6 +512,7 @@
 				F8F90E011B040A8300A26232 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8F90E021B040A8300A26232 /* Build configuration list for PBXNativeTarget "FastMarkettTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +521,7 @@
 				F8F90E041B040A8300A26232 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
