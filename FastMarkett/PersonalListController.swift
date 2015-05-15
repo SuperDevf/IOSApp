@@ -11,7 +11,7 @@ import UIKit
 class PersonalListController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var personalTableView: UITableView!
-
+    var productName = ""
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -20,7 +20,11 @@ class PersonalListController: UIViewController,UITableViewDelegate,UITableViewDa
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var personalcell: PersonalTableCell = self.personalTableView.dequeueReusableCellWithIdentifier("personalCell", forIndexPath: indexPath) as! PersonalTableCell
+        
+        personalcell.personalProductName.text = productName
+        
         return personalcell
+        
     }
     
     

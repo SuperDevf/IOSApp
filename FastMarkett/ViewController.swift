@@ -29,6 +29,7 @@ var Producto: [String] = ["1", "Jugo de fruta","bebida","ADES","$14.50","MEGA CO
                 var list = [String:AnyObject]()
                 
                 list["description"]=product["descripcion"].stringValue
+                
                 self.productList.append(list)
                println(self.productList)
                 println("<==>")
@@ -53,6 +54,18 @@ var Producto: [String] = ["1", "Jugo de fruta","bebida","ADES","$14.50","MEGA CO
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    var passProducts = segue.destinationViewController as! PersonalListController
+        
+        if let indexPath = self.tableView.indexPathForSelectedRow(){
+            
+            var product = self.productList[indexPath.row]
+            passProducts.productName = product["description"] as! String
+            
+        }
+    }
+    
     
     
     override func viewDidLoad() {

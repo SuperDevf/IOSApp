@@ -46,10 +46,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.86645754419191923" green="0.86645754419191923" blue="0.86645754419191923" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="productName" destination="duV-DT-ub9" id="zEf-WL-ch2"/>
                                             <outlet property="productPrice" destination="Vgu-3J-Lvc" id="G1e-vh-53D"/>
                                             <outlet property="productSuper" destination="G9T-dG-9kb" id="GIc-wr-3B0"/>
+                                            <segue destination="z8o-Lr-9q2" kind="show" id="78C-5h-n17"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -80,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3329" y="480"/>
+            <point key="canvasLocation" x="3367" y="480"/>
         </scene>
         <!--Personal List Controller-->
         <scene sceneID="x0F-U8-ezW">
@@ -105,7 +107,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripcion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddz-tQ-9vl">
-                                                    <rect key="frame" x="38" y="18" width="92" height="21"/>
+                                                    <rect key="frame" x="38" y="8" width="363" height="42"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -192,6 +194,7 @@
         <!--Navigation Controller-->
         <scene sceneID="lhd-vo-ASu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jq9-Jb-aZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UWx-Ji-UN1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PhG-CK-92l">
@@ -203,7 +206,6 @@
                         <segue destination="YhP-tf-zzA" kind="relationship" relationship="rootViewController" id="a1c-ZV-gZX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jq9-Jb-aZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1208" y="480"/>
         </scene>
@@ -213,4 +215,7 @@
         <image name="ios7-plus.png" width="512" height="512"/>
         <image name="shattered.png" width="500" height="500"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bap-it-oqb"/>
+    </inferredMetricsTieBreakers>
 </document>
