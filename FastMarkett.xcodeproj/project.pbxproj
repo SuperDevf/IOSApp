@@ -13,6 +13,8 @@
 		F86623911B0676BB0097D72A /* PersonalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86623901B0676BB0097D72A /* PersonalTableCell.swift */; };
 		F86623951B0678A10097D72A /* PersonalListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86623941B0678A10097D72A /* PersonalListController.swift */; };
 		F8E58B971B0439D1008D81DD /* ios7-person.png in Resources */ = {isa = PBXBuildFile; fileRef = F8E58B961B0439D1008D81DD /* ios7-person.png */; };
+		F8F4861A1B0AA7CA006697CA /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F486191B0AA7CA006697CA /* CategoriesViewController.swift */; };
+		F8F4861C1B0ABBE6006697CA /* CategoriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F4861B1B0ABBE6006697CA /* CategoriesViewCell.swift */; };
 		F8F90DE61B040A8300A26232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F90DE51B040A8300A26232 /* AppDelegate.swift */; };
 		F8F90DE81B040A8300A26232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F90DE71B040A8300A26232 /* ViewController.swift */; };
 		F8F90DEB1B040A8300A26232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F90DE91B040A8300A26232 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		F86623901B0676BB0097D72A /* PersonalTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalTableCell.swift; sourceTree = "<group>"; };
 		F86623941B0678A10097D72A /* PersonalListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalListController.swift; sourceTree = "<group>"; };
 		F8E58B961B0439D1008D81DD /* ios7-person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7-person.png"; sourceTree = "<group>"; };
+		F8F486191B0AA7CA006697CA /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		F8F4861B1B0ABBE6006697CA /* CategoriesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewCell.swift; sourceTree = "<group>"; };
 		F8F90DE01B040A8200A26232 /* FastMarkett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastMarkett.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F90DE41B040A8300A26232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8F90DE51B040A8300A26232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				F8F90E051B040BE800A26232 /* PersonalListCell.swift */,
 				F86623901B0676BB0097D72A /* PersonalTableCell.swift */,
 				F86623941B0678A10097D72A /* PersonalListController.swift */,
+				F8F486191B0AA7CA006697CA /* CategoriesViewController.swift */,
+				F8F4861B1B0ABBE6006697CA /* CategoriesViewCell.swift */,
 			);
 			path = FastMarkett;
 			sourceTree = "<group>";
@@ -322,8 +328,10 @@
 			files = (
 				F8F90DE81B040A8300A26232 /* ViewController.swift in Sources */,
 				F86623951B0678A10097D72A /* PersonalListController.swift in Sources */,
+				F8F4861A1B0AA7CA006697CA /* CategoriesViewController.swift in Sources */,
 				F8F90DE61B040A8300A26232 /* AppDelegate.swift in Sources */,
 				F86623911B0676BB0097D72A /* PersonalTableCell.swift in Sources */,
+				F8F4861C1B0ABBE6006697CA /* CategoriesViewCell.swift in Sources */,
 				F8F90E061B040BE800A26232 /* PersonalListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
