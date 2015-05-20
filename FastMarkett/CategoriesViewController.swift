@@ -12,15 +12,17 @@ import Alamofire
 
 import SwiftyJSON
 
-let reuseIdentifier = "item"
+var reuseIdentifier = "item"
 
 class CategoriesViewController: UICollectionViewController, UICollectionViewDataSource,UICollectionViewDelegate{
     
     
+@IBOutlet var collectionView2: UICollectionView!
+    
 var categories = [NSDictionary]()
 
     func requestCategories(){
-        Alamofire.request(.GET, "http://6e7f4e68.ngrok.io/categories/?format=json").responseJSON { (request, response, products, _) in
+        Alamofire.request(.GET, "http://93efa3de.ngrok.io/categories/?format=json").responseJSON { (request, response, products, _) in
             var json = JSON( products!)
             
             
@@ -29,10 +31,11 @@ var categories = [NSDictionary]()
                 var list = [String:AnyObject]()
                
                 list["category"]=product["categoria"].stringValue
-                list["image"]=product["imagen"].stringValue
                 self.categories.append(list)
-                self.collectionView!.reloadData()
+                println(self.categories)
+                
             }
+       
             
         }
         
@@ -51,9 +54,9 @@ var categories = [NSDictionary]()
 
         // Register cell classes
         self.collectionView!.registerClass(CategoriesViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+    
         // Do any additional setup after loading the view.
-        requestCategories()
+       // requestCategories()
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,14 +75,14 @@ var categories = [NSDictionary]()
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        return self.categories.count
-    }
+        return 1    }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("item", forIndexPath: indexPath) as! CategoriesViewCell
         
-      cell.categoryName.text = "sd"
+        println(cell)
+      cell.categoryName.text = "Something"
         
         
         // Configure the cell
