@@ -22,7 +22,7 @@ class CategoriesViewController: UICollectionViewController, UICollectionViewData
 var categories = [NSDictionary]()
 
     func requestCategories(){
-        Alamofire.request(.GET, "http://93efa3de.ngrok.io/categories/?format=json").responseJSON { (request, response, products, _) in
+        Alamofire.request(.GET, "http://60e554c2.ngrok.io/categories/?format=json").responseJSON { (request, response, products, _) in
             var json = JSON( products!)
             
             
@@ -33,6 +33,8 @@ var categories = [NSDictionary]()
                 list["category"]=product["categoria"].stringValue
                 self.categories.append(list)
                 println(self.categories)
+                
+                self.collectionView2.reloadData()
                 
             }
        
@@ -47,11 +49,10 @@ var categories = [NSDictionary]()
     
     override func viewDidLoad() {
         
-        
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        requestCategories()
         // Register cell classes
         self.collectionView!.registerClass(CategoriesViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     
@@ -75,14 +76,15 @@ var categories = [NSDictionary]()
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        return 1    }
+        return categories.count    }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("item", forIndexPath: indexPath) as! CategoriesViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("itemCell", forIndexPath: indexPath) as! CategoriesViewCell
         
-        println(cell)
-      cell.categoryName.text = "Something"
+        var valores = categories[indexPath.row]
+        var etiqueta = valores["category"] as! String
+      cell.categoryName.text = etiqueta
         
         
         // Configure the cell
