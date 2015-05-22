@@ -12,7 +12,6 @@ import Alamofire
 
 import SwiftyJSON
 
-var reuseIdentifier = "item"
 
 class CategoriesViewController: UICollectionViewController, UICollectionViewDataSource,UICollectionViewDelegate{
     
@@ -20,23 +19,46 @@ class CategoriesViewController: UICollectionViewController, UICollectionViewData
 @IBOutlet var collectionView2: UICollectionView!
     
 var categories = [NSDictionary]()
+var images: [NSDictionary] = []
+    
+var ids = [NSDictionary]()
+var selectedRow = 0
+var categoryid = 0
 
     func requestCategories(){
-        Alamofire.request(.GET, "http://60e554c2.ngrok.io/categories/?format=json").responseJSON { (request, response, products, _) in
+        Alamofire.request(.GET, "http://5c463342.ngrok.io/categories/?format=json").responseJSON { (request, response, products, _) in
             var json = JSON( products!)
             
             
             for (key: String, product: JSON) in json {
                 
                 var list = [String:AnyObject]()
-               
-                list["category"]=product["categoria"].stringValue
-                self.categories.append(list)
-                println(self.categories)
+                var urls = [String:AnyObject]()
+                var basepath = "http://5c463342.ngrok.io/"
+                var id = [String:NSInteger]()
+                id["ids"]=product["id"].intValue
                 
-                self.collectionView2.reloadData()
+                list["category"]=product["categoria"].stringValue
+                
+                let url = NSURL(string: basepath + product["imagen"].stringValue)//basepath + product["imagen"].stringValue)
+                
+                
+                let data = NSData(contentsOfURL: url!)
+                if(data != nil){
+                
+                    urls["url"] = UIImage(data: data!)
+                
+                }
+                
+                self.images.append(urls)
+                self.categories.append(list)
+                self.ids.append(id)
+
+                
+               
                 
             }
+         self.collectionView!.reloadData()
        
             
         }
@@ -54,10 +76,9 @@ var categories = [NSDictionary]()
         // self.clearsSelectionOnViewWillAppear = false
         requestCategories()
         // Register cell classes
-        self.collectionView!.registerClass(CategoriesViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.registerClass(CategoriesViewCell.self, forCellWithReuseIdentifier: "item")
     
         // Do any additional setup after loading the view.
-       // requestCategories()
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,16 +97,24 @@ var categories = [NSDictionary]()
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        return categories.count    }
+        return categories.count   }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("itemCell", forIndexPath: indexPath) as! CategoriesViewCell
         
-        var valores = categories[indexPath.row]
-        var etiqueta = valores["category"] as! String
-      cell.categoryName.text = etiqueta
         
+        var valores = categories[indexPath.row]
+       var etiqueta = valores["category"] as! String
+        cell.categoryName.text = etiqueta
+        
+        var pictures = self.images[indexPath.row]
+        
+        var picture = UIImage()
+        
+        picture = pictures["url"] as! UIImage
+
+        cell.categoryImage.image = picture
         
         // Configure the cell
     
@@ -93,6 +122,40 @@ var categories = [NSDictionary]()
     }
 
     // MARK: UICollectionViewDelegate
+    
 
+    override func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+        println("1")
+            selectedRow = indexPath.row
+        self.performSegueWithIdentifier("categorysegue", sender: self)
+    }
+    
+  /*  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    let destination = segue.destinationViewController as! ViewController
+        destination.idcategory = sender?.items as! NSInteger
+        println(destination.idcategory)
+        
+        
+        
+        
+    }*/
+    
+
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "categorysegue"){
+            //let cell = sender as! UICollectionViewCell
+            let destination = segue.destinationViewController as! ViewController
+//            print(selectedRow)
+            if let indexPath = collectionView?.indexPathsForSelectedItems(){
+                println(indexPath[0].row)
+                destination.idcategory = indexPath[0].row + 1
+            }
+            //destination.idcategory = collectionView?.indexPathsForSelectedItems()
+        }
+    }
+    
+    
 
 }

@@ -16,9 +16,15 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     @IBOutlet weak var tableView: UITableView!
     
     var productList = [NSDictionary]()
+    
+    var idcategory = NSInteger()
+    
+    
+
         
     func requestProducts(){
-        Alamofire.request(.GET, "http://6e7f4e68.ngrok.io/products/?format=json").responseJSON { (request, response, products, _) in
+        
+        Alamofire.request(.GET, "http://5c463342.ngrok.io/categories/" + String(idcategory) ).responseJSON { (request, response, products, _) in
         var json = JSON( products!)
             
             
@@ -29,8 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
                 list["description"]=product["descripcion"].stringValue
                 
                 self.productList.append(list)
-               println(self.productList)
-                println("<==>")
+              
                 self.tableView.reloadData()
             }
     
@@ -55,7 +60,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     var passProducts = segue.destinationViewController as! PersonalListController
-        
+     
       
     }
     
@@ -64,6 +69,8 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         requestProducts()
+        println("===")
+        println(idcategory)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
