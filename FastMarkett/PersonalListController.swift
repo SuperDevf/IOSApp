@@ -10,18 +10,23 @@ import UIKit
 
 class PersonalListController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    var list = [NSString]()
+    
     @IBOutlet weak var personalTableView: UITableView!
-    var productName = ""
+    
+
+    
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return list.count
     }
     
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var personalcell: PersonalTableCell = self.personalTableView.dequeueReusableCellWithIdentifier("personalCell", forIndexPath: indexPath) as! PersonalTableCell
-        
-        personalcell.personalProductName.text = productName
+       println("======")
+        println(list)
         
         return personalcell
         
@@ -32,7 +37,7 @@ class PersonalListController: UIViewController,UITableViewDelegate,UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 

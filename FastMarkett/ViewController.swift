@@ -17,10 +17,14 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     var productList = [NSDictionary]()
     
-var Producto: [String] = ["1", "Jugo de fruta","bebida","ADES","$14.50","MEGA COMERCIAL SUCURSAL SATELITE"]
+    var idcategory = NSInteger()
     
+    
+
+        
     func requestProducts(){
-        Alamofire.request(.GET, "http://6e7f4e68.ngrok.io/products/?format=json").responseJSON { (request, response, products, _) in
+        
+        Alamofire.request(.GET, "http://5c463342.ngrok.io/categories/" + String(idcategory) ).responseJSON { (request, response, products, _) in
         var json = JSON( products!)
             
             
@@ -31,8 +35,7 @@ var Producto: [String] = ["1", "Jugo de fruta","bebida","ADES","$14.50","MEGA CO
                 list["description"]=product["descripcion"].stringValue
                 
                 self.productList.append(list)
-               println(self.productList)
-                println("<==>")
+              
                 self.tableView.reloadData()
             }
     
@@ -57,13 +60,8 @@ var Producto: [String] = ["1", "Jugo de fruta","bebida","ADES","$14.50","MEGA CO
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     var passProducts = segue.destinationViewController as! PersonalListController
-        
-        if let indexPath = self.tableView.indexPathForSelectedRow(){
-            
-            var product = self.productList[indexPath.row]
-            passProducts.productName = product["description"] as! String
-            
-        }
+     
+      
     }
     
     
