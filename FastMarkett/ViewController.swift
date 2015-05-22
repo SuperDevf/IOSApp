@@ -69,8 +69,6 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         requestProducts()
-        println("===")
-        println(idcategory)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

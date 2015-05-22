@@ -125,8 +125,7 @@ var categoryid = 0
     
 
     override func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
-        println("1")
-            selectedRow = indexPath.row
+        selectedRow = indexPath.row
         self.performSegueWithIdentifier("categorysegue", sender: self)
     }
     
