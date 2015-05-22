@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552BDB1D1B0F829100EFCB70 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 552BDB1C1B0F829100EFCB70 /* logo.png */; };
+		555524D01B0F651700B3B357 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555524CC1B0F651700B3B357 /* Bolts.framework */; };
+		555524D11B0F651700B3B357 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555524CD1B0F651700B3B357 /* FBSDKCoreKit.framework */; };
+		555524D21B0F651700B3B357 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555524CE1B0F651700B3B357 /* FBSDKLoginKit.framework */; };
+		555524D31B0F651700B3B357 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555524CF1B0F651700B3B357 /* FBSDKShareKit.framework */; };
+		555524D61B0F691500B3B357 /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555524D51B0F691500B3B357 /* FacebookViewController.swift */; };
 		DB1F400E87C4CB2BA4BB6F21 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19D3AD9AC79B5D2512B9AEC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F86623891B065F630097D72A /* shattered.png in Resources */ = {isa = PBXBuildFile; fileRef = F86623881B065F630097D72A /* shattered.png */; };
 		F866238D1B0669300097D72A /* ios7-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = F866238C1B0669300097D72A /* ios7-plus.png */; };
@@ -37,6 +43,13 @@
 
 /* Begin PBXFileReference section */
 		1DE9A4843E571AE6815AF7B5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		552BDB1C1B0F829100EFCB70 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		555524CC1B0F651700B3B357 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = FastMarkett/Bolts.framework; sourceTree = "<group>"; };
+		555524CD1B0F651700B3B357 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = FastMarkett/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		555524CE1B0F651700B3B357 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = FastMarkett/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		555524CF1B0F651700B3B357 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = FastMarkett/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		555524D41B0F67BF00B3B357 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		555524D51B0F691500B3B357 /* FacebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
 		68F469AD9460AEBB0C5DA6C8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A19D3AD9AC79B5D2512B9AEC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86623881B065F630097D72A /* shattered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shattered.png; sourceTree = "<group>"; };
@@ -66,6 +79,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB1F400E87C4CB2BA4BB6F21 /* Pods.framework in Frameworks */,
+				555524D11B0F651700B3B357 /* FBSDKCoreKit.framework in Frameworks */,
+				555524D31B0F651700B3B357 /* FBSDKShareKit.framework in Frameworks */,
+				555524D21B0F651700B3B357 /* FBSDKLoginKit.framework in Frameworks */,
+				555524D01B0F651700B3B357 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +108,10 @@
 		E5E16C84FE5C8C1DB2D41447 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				555524CC1B0F651700B3B357 /* Bolts.framework */,
+				555524CD1B0F651700B3B357 /* FBSDKCoreKit.framework */,
+				555524CE1B0F651700B3B357 /* FBSDKLoginKit.framework */,
+				555524CF1B0F651700B3B357 /* FBSDKShareKit.framework */,
 				A19D3AD9AC79B5D2512B9AEC /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -130,6 +151,7 @@
 		F8F90DE21B040A8200A26232 /* FastMarkett */ = {
 			isa = PBXGroup;
 			children = (
+				552BDB1C1B0F829100EFCB70 /* logo.png */,
 				F8E58B8F1B041C80008D81DD /* images */,
 				F8F90DE51B040A8300A26232 /* AppDelegate.swift */,
 				F8F90DE71B040A8300A26232 /* ViewController.swift */,
@@ -142,6 +164,8 @@
 				F86623941B0678A10097D72A /* PersonalListController.swift */,
 				F8F486191B0AA7CA006697CA /* CategoriesViewController.swift */,
 				F8F4861B1B0ABBE6006697CA /* CategoriesViewCell.swift */,
+				555524D41B0F67BF00B3B357 /* Bridging-Header.h */,
+				555524D51B0F691500B3B357 /* FacebookViewController.swift */,
 			);
 			path = FastMarkett;
 			sourceTree = "<group>";
@@ -258,6 +282,7 @@
 				F8F90DEB1B040A8300A26232 /* Main.storyboard in Resources */,
 				F866238D1B0669300097D72A /* ios7-plus.png in Resources */,
 				F8F90DF01B040A8300A26232 /* LaunchScreen.xib in Resources */,
+				552BDB1D1B0F829100EFCB70 /* logo.png in Resources */,
 				F8E58B971B0439D1008D81DD /* ios7-person.png in Resources */,
 				F8F90E081B0412BB00A26232 /* Podfile in Resources */,
 				F8F90DED1B040A8300A26232 /* Images.xcassets in Resources */,
@@ -326,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555524D61B0F691500B3B357 /* FacebookViewController.swift in Sources */,
 				F8F90DE81B040A8300A26232 /* ViewController.swift in Sources */,
 				F86623951B0678A10097D72A /* PersonalListController.swift in Sources */,
 				F8F4861A1B0AA7CA006697CA /* CategoriesViewController.swift in Sources */,
@@ -462,9 +488,14 @@
 			baseConfigurationReference = 1DE9A4843E571AE6815AF7B5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FastMarkett",
+				);
 				INFOPLIST_FILE = FastMarkett/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FastMarkett/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -473,9 +504,14 @@
 			baseConfigurationReference = 68F469AD9460AEBB0C5DA6C8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FastMarkett",
+				);
 				INFOPLIST_FILE = FastMarkett/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FastMarkett/Bridging-Header.h";
 			};
 			name = Release;
 		};
