@@ -54,12 +54,8 @@ var categoryid = 0
                 self.categories.append(list)
                 self.ids.append(id)
 
-                
-               
-                
             }
-         self.collectionView!.reloadData()
-       
+         self.collectionView!.reloadData()       
             
         }
         
@@ -97,7 +93,7 @@ var categoryid = 0
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        return categories.count   }
+        return categories.count-1}
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         

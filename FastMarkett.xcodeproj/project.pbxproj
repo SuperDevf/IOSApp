@@ -70,7 +70,7 @@
 		F8F90DFA1B040A8300A26232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8F90DFB1B040A8300A26232 /* FastMarkettTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastMarkettTests.swift; sourceTree = "<group>"; };
 		F8F90E051B040BE800A26232 /* PersonalListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalListCell.swift; sourceTree = "<group>"; };
-		F8F90E071B0412BB00A26232 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		F8F90E071B0412BB00A26232 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +120,7 @@
 		F8E58B8F1B041C80008D81DD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				552BDB1C1B0F829100EFCB70 /* logo.png */,
 				F866238C1B0669300097D72A /* ios7-plus.png */,
 				F86623881B065F630097D72A /* shattered.png */,
 				F8E58B961B0439D1008D81DD /* ios7-person.png */,
@@ -151,7 +152,6 @@
 		F8F90DE21B040A8200A26232 /* FastMarkett */ = {
 			isa = PBXGroup;
 			children = (
-				552BDB1C1B0F829100EFCB70 /* logo.png */,
 				F8E58B8F1B041C80008D81DD /* images */,
 				F8F90DE51B040A8300A26232 /* AppDelegate.swift */,
 				F8F90DE71B040A8300A26232 /* ViewController.swift */,

@@ -24,7 +24,12 @@ class FacebookViewController: UIViewController, FBSDKLoginButtonDelegate {
         if (FBSDKAccessToken.currentAccessToken() != nil)
         {
             // User is already logged in, do work such as go to next view controller.
-            self.performSegueWithIdentifier("segueLista", sender: nil)
+           // self.performSegueWithIdentifier("segueLista", sender: nil)
+            
+            //let secondViewController = self.storyboard!.instantiateViewControllerWithIdentifier("PersonalListController") as! PersonalListController
+            
+            //self.navigationController!.pushViewController(secondViewController, animated: true)
+            self.navigationController!.pushViewController(self.storyboard!.instantiateViewControllerWithIdentifier("PersonalListController") as! PersonalListController, animated: true)
         }
         else
         {
@@ -57,17 +62,23 @@ class FacebookViewController: UIViewController, FBSDKLoginButtonDelegate {
             // Handle cancellations
         }
         else {
+            self.performSegueWithIdentifier("segueLista", sender: nil)
             // If you ask for multiple permissions at once, you
             // should check if specific permissions missing
             if result.grantedPermissions.contains("email")
             {
                 // Do work
-                self.performSegueWithIdentifier("segueLista", sender: nil)
+                //self.performSegueWithIdentifier("segueLista", sender: nil)
             }
         }
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        let loginView : FBSDKLoginButton = FBSDKLoginButton()
+        self.view.addSubview(loginView)
+        loginView.center = self.view.center
+        loginView.readPermissions = ["public_profile", "email", "user_friends"]
+        loginView.delegate = self
         println("User Logged Out")
     }
     

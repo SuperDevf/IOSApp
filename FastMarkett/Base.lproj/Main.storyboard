@@ -42,32 +42,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.57647058819999997" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Vaz-5R-YXc">
-                            <size key="itemSize" width="179" height="160"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Vaz-5R-YXc">
+                            <size key="itemSize" width="100" height="118"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="itemCell" id="1E2-Qb-kJQ" customClass="CategoriesViewCell" customModule="FastMarkett" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="itemCell" id="1E2-Qb-kJQ" customClass="CategoriesViewCell" customModule="FastMarkett" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="179" height="160"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="98" height="118"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qZY-J5-K2x">
-                                            <rect key="frame" x="14" y="-9" width="151" height="123"/>
+                                            <rect key="frame" x="12" y="8" width="75" height="75"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOX-0z-ZdI">
-                                            <rect key="frame" x="39" y="76" width="101" height="35"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOX-0z-ZdI">
+                                            <rect key="frame" x="0.0" y="75" width="100" height="35"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" red="0.97601010101010099" green="0.97601010101010099" blue="0.97601010101010099" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <size key="customSize" width="98" height="118"/>
                                 <connections>
                                     <outlet property="categoryImage" destination="qZY-J5-K2x" id="37R-4h-42K"/>
                                     <outlet property="categoryName" destination="hOX-0z-ZdI" id="Buq-1A-UFS"/>
@@ -175,7 +176,7 @@
         <!--Personal List Controller-->
         <scene sceneID="x0F-U8-ezW">
             <objects>
-                <viewController id="z8o-Lr-9q2" customClass="PersonalListController" customModule="FastMarkett" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonalListController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z8o-Lr-9q2" customClass="PersonalListController" customModule="FastMarkett" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qNz-Xg-zqD"/>
                         <viewControllerLayoutGuide type="bottom" id="rhl-xB-HC2"/>
@@ -229,6 +230,18 @@
                                     <segue destination="ANi-hB-9MX" kind="show" id="5xp-Ix-czb"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9r-UM-2Bz">
+                                <rect key="frame" x="-5" y="0.0" width="600" height="44"/>
+                                <color key="barTintColor" red="0.36078431370000003" green="0.52549019610000003" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="O76-Zt-Nfk">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="Xo2-tj-gpt"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.57647058819999997" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
