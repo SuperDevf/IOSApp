@@ -17,20 +17,22 @@ class FacebookViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Drawing code
     }
     */
+    //@IBOutlet weak var loginButton: FBSDKLoginButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+      //  self.loginButton.delegate = self
         
         if (FBSDKAccessToken.currentAccessToken() != nil)
         {
             // User is already logged in, do work such as go to next view controller.
-           // self.performSegueWithIdentifier("segueLista", sender: nil)
+            var nextView = PersonalListController()
+           
+            self.presentViewController(nextView, animated: true, completion: nil)
+            //self.performSegueWithIdentifier("segueLoginLista", sender: nil)
             
-            //let secondViewController = self.storyboard!.instantiateViewControllerWithIdentifier("PersonalListController") as! PersonalListController
-            
-            //self.navigationController!.pushViewController(secondViewController, animated: true)
-            self.navigationController!.pushViewController(self.storyboard!.instantiateViewControllerWithIdentifier("PersonalListController") as! PersonalListController, animated: true)
-        }
+         }
         else
         {
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
@@ -62,13 +64,13 @@ class FacebookViewController: UIViewController, FBSDKLoginButtonDelegate {
             // Handle cancellations
         }
         else {
-            self.performSegueWithIdentifier("segueLista", sender: nil)
+        
             // If you ask for multiple permissions at once, you
             // should check if specific permissions missing
             if result.grantedPermissions.contains("email")
             {
                 // Do work
-                //self.performSegueWithIdentifier("segueLista", sender: nil)
+            self.performSegueWithIdentifier("segueLista", sender: nil)
             }
         }
     }

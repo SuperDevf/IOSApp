@@ -11,11 +11,9 @@ import UIKit
 class PersonalListCell: UITableViewCell {
 
     @IBOutlet weak var productName: UILabel!
-    
-    
     @IBOutlet weak var productPrice: UILabel!
-    
-    @IBOutlet weak var productSuper: UILabel!
+    @IBOutlet weak var productStore: UILabel!
+    @IBOutlet weak var localId: UILabel!
     
     
     override func awakeFromNib() {

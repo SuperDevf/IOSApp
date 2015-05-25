@@ -9,6 +9,7 @@
 #ifndef FastMarkett_Bridging_Header_h
 #define FastMarkett_Bridging_Header_h
 
+#import <GoogleMaps/GoogleMaps.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 

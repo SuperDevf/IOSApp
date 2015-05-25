@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allowing access to your location, you can spot your position on the map</string>
 	<key>FacebookAppID</key>
 	<string>1427618314225320</string>
 	<key>FacebookDisplayName</key>

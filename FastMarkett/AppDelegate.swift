@@ -13,10 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let googleMapApiKey = "AIzaSyDTx7hRYvMjnguOE7sSPABCqBnhpw0RadQ"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
+        //Google Maps Api Key
+        GMSServices.provideAPIKey(googleMapApiKey)
         
         //facebook SDK Response
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
